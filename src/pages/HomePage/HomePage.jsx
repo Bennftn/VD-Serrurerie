@@ -70,6 +70,11 @@ function HomePage({ navigateTo }) {
             ))}
           </div>
         </div>
+        <div style={{textAlign: 'center', marginTop: '3rem' }}>
+        <button className="cta-button" onClick={() => navigateTo('contact')}>
+            Me contacter
+          </button>
+        </div>
       </section>
     </>
   );

@@ -111,7 +111,7 @@ function ContactPage({ formData, handleFormChange, handleSubmit }) {
           </div>
 
           <div className="contact-info">
-            <h3>Nos Coordonnées</h3>
+            <h3>Mes Coordonnées</h3>
 
             <div className="info-item">
               <Phone size={24} />
