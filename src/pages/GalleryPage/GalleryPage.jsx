@@ -1,16 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import galleryData from '../../data/galleryData.json';
 import './GalleryPage.css';
 
 function GalleryPage() {
-  const projects = [
-    { title: "Portail en fer forgé", category: "Portails" },
-    { title: "Garde-corps balcon", category: "Garde-corps" },
-    { title: "Grille de fenêtre", category: "Grilles" },
-    { title: "Rampe d'escalier", category: "Rampes" },
-    { title: "Portail coulissant", category: "Portails" },
-    { title: "Pergola métallique", category: "Structures" }
-  ];
+  const projects = galleryData.projects;
 
   return (
     <section className="section">
@@ -24,13 +18,11 @@ function GalleryPage() {
         <meta property="og:title" content="Galerie de Réalisations - VD Serrurerie" />
         <meta property="og:description" content="Découvrez nos créations en fer forgé : portails, garde-corps, grilles..." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://votre-site.com/#/galerie" />
-        <meta property="og:image" content="https://votre-site.com/images/photo-portail-1.jpg" />
+        <meta property="og:url" content="https://votre-site.com/galerie" />
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Galerie VD Serrurerie" />
         <meta name="twitter:description" content="Nos plus belles créations en ferronnerie d'art" />
-        <meta name="twitter:image" content="https://votre-site.com/images/photo-portail-1.jpg" />
         {/* Schema.org - ImageGallery */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -38,7 +30,7 @@ function GalleryPage() {
             "@type": "ImageGallery",
             "name": "Galerie de réalisations VD Serrurerie",
             "description": "Galerie photos de nos réalisations en ferronnerie d'art et métallerie",
-            "url": "https://votre-site.com/#/galerie",
+            "url": "https://votre-site.com/galerie",
             "about": {
               "@type": "Thing",
               "name": "Ferronnerie d'art et métallerie"
@@ -46,7 +38,6 @@ function GalleryPage() {
             "associatedMedia": projects.map((project, index) => ({
               "@type": "ImageObject",
               "name": project.title,
-              "description": project.description,
               "contentUrl": `https://votre-site.com/images/projet-${index + 1}.jpg`
             }))
           })}
@@ -72,7 +63,6 @@ function GalleryPage() {
             "workExample": projects.map(project => ({
               "@type": "CreativeWork",
               "name": project.title,
-              "description": project.description,
               "genre": project.category
             }))
           })}
@@ -93,7 +83,7 @@ function GalleryPage() {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Galerie",
-                "item": "https://votre-site.com/#/galerie"
+                "item": "https://votre-site.com/galerie"
               }
             ]
           })}
@@ -108,7 +98,15 @@ function GalleryPage() {
           {projects.map((project, index) => (
             <div key={index} className="gallery-item">
               <div className="gallery-placeholder">
-                [Photo à venir]
+                {project.image ? (
+                  <img
+                  src={project.image}
+                  alt={project.alt || project.title}
+                  loading="lazy"
+                  />
+                ) : (
+                  '[Photo à venir]'
+                )}
               </div>
               <div className="gallery-info">
                 <h3>{project.title}</h3>

@@ -1,0 +1,36 @@
+{
+  "projects": [
+    {
+      "title": "Portail en fer forgé",
+      "category": "Portails",
+      "image": "/images/galerie/photo-test.jpg",
+      "alt": "test d'une photo"
+    },
+    {
+      "title": "Garde-corps balcon",
+      "category": "Garde-corps",
+      "image": "/images/galerie/photo-test-2.jpg",
+      "alt": "test d'une photo"
+    },
+    {
+      "title": "Grille de fenêtre",
+      "category": "Grilles",
+      "image": "/images/galerie/photo-test-3.jpg",
+      "alt": "test d'une photo"
+    },
+    {
+      "title": "Rampe d'escalier",
+      "category": "Rampes",
+      "image": "/images/galerie/photo-test-4.jpg",
+      "alt": "test d'une photo"
+    },
+    {
+      "title": "Portail coulissant",
+      "category": "Portails"
+    },
+    {
+      "title": "Pergola métallique",
+      "category": "Structures"
+    }
+  ]
+}
