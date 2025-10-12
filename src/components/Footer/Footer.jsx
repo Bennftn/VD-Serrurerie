@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import './Footer.css';
 
-function Footer({ navigateTo }) {
+function Footer() {
   return (
     <footer className="footer">
       <div className="container">
@@ -15,10 +16,10 @@ function Footer({ navigateTo }) {
           <div className="footer-section">
             <h3>Navigation</h3>
             <ul>
-              <li><a href="#" onClick={() => navigateTo('accueil')}>Accueil</a></li>
-              <li><a href="#" onClick={() => navigateTo('services')}>Services</a></li>
-              <li><a href="#" onClick={() => navigateTo('galerie')}>Galerie</a></li>
-              <li><a href="#" onClick={() => navigateTo('contact')}>Contact</a></li>
+              <li><Link to="/">Accueil</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/galerie">Galerie</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
 

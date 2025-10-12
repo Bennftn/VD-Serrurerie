@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './Header.css';
 
-function Header({ currentPage, navigateTo }) {
+function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const handleNavigation = (page) => {
-    navigateTo(page);
+  const closeMobileMenu = () => {
     setMobileMenuOpen(false);
   };
 
@@ -14,70 +14,66 @@ function Header({ currentPage, navigateTo }) {
     <header className="header">
       <div className="container">
         <div className="header-content">
-          <div className="logo">VD Serrurerie</div>
-          
+          <NavLink to="/" className="logo" onClick={closeMobileMenu}>
+            VD Serrurerie
+          </NavLink>
           <nav className="nav-desktop">
             <ul>
               <li>
-                <a 
-                  href="#" 
-                  className={currentPage === 'accueil' ? 'active' : ''} 
-                  onClick={() => handleNavigation('accueil')}
+                <NavLink
+                  to="/"
+                  className={({ isActive }) => isActive ? 'active' : ''}
                 >
                   Accueil
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a 
-                  href="#" 
-                  className={currentPage === 'apropos' ? 'active' : ''} 
-                  onClick={() => handleNavigation('apropos')}
+                <NavLink
+                  to="/a-propos"
+                  className={({ isActive }) => isActive ? 'active' : ''}
                 >
                   À propos
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a 
-                  href="#" 
-                  className={currentPage === 'services' ? 'active' : ''} 
-                  onClick={() => handleNavigation('services')}
+                <NavLink
+                  to="/services"
+                  className={({ isActive }) => isActive ? 'active' : ''}
                 >
                   Services
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a 
-                  href="#" 
-                  className={currentPage === 'galerie' ? 'active' : ''} 
-                  onClick={() => handleNavigation('galerie')}
+                <NavLink
+                  to="/galerie"
+                  className={({ isActive }) => isActive ? 'active' : ''}
                 >
                   Galerie
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a 
-                  href="#" 
-                  className={currentPage === 'zone' ? 'active' : ''} 
-                  onClick={() => handleNavigation('zone')}
+                <NavLink
+                  to="/zone"
+                  className={({ isActive }) => isActive ? 'active' : ''}
                 >
                   Zone
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a 
-                  href="#" 
-                  className={currentPage === 'contact' ? 'active' : ''} 
-                  onClick={() => handleNavigation('contact')}
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) => isActive ? 'active' : ''}
                 >
                   Contact
-                </a>
+                </NavLink>
               </li>
             </ul>
           </nav>
 
-          <button 
-            className="menu-toggle" 
+          <button
+            className="menu-toggle"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -86,12 +82,12 @@ function Header({ currentPage, navigateTo }) {
         {mobileMenuOpen && (
           <nav className="mobile-menu">
             <ul>
-              <li><a href="#" onClick={() => handleNavigation('accueil')}>Accueil</a></li>
-              <li><a href="#" onClick={() => handleNavigation('apropos')}>À propos</a></li>
-              <li><a href="#" onClick={() => handleNavigation('services')}>Services</a></li>
-              <li><a href="#" onClick={() => handleNavigation('galerie')}>Galerie</a></li>
-              <li><a href="#" onClick={() => handleNavigation('zone')}>Zone</a></li>
-              <li><a href="#" onClick={() => handleNavigation('contact')}>Contact</a></li>
+              <li><NavLink to="/" onClick={closeMobileMenu}>Accueil</NavLink></li>
+              <li><NavLink to="/a-propos" onClick={closeMobileMenu}>À propos</NavLink></li>
+              <li><NavLink to="/services" onClick={closeMobileMenu}>Services</NavLink></li>
+              <li><NavLink to="/galerie" onClick={closeMobileMenu}>Galerie</NavLink></li>
+              <li><NavLink to="/zone" onClick={closeMobileMenu}>Zone</NavLink></li>
+              <li><NavLink to="/contact" onClick={closeMobileMenu}>Contact</NavLink></li>
             </ul>
           </nav>
         )}

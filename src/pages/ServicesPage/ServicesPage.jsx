@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import './ServicesPage.css';
 
 function ServicesPage() {
@@ -51,6 +52,70 @@ function ServicesPage() {
 
   return (
     <section className="section">
+      <Helmet>
+        <title>Services Serrurerie Métallerie - Portails, Garde-corps | VD Serrurerie 77</title>
+        <meta name="description" content="Tous nos services de serrurerie en Seine-et-Marne : portails sur mesure, ouverture de porte urgence, garde-corps, grilles protection, restauration ferronnerie. Devis gratuit ☎️" />
+        <meta name="keywords" content="services serrurerie 77, portail sur mesure, ouverture porte urgence, dépannage serrurier, garde-corps, grille protection, restauration ferronnerie, Seine-et-Marne, Jouy-sur-Morin" />
+        <link rel="canonical" href="https://votre-site.com/services" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Services de Serrurerie et Ferronnerie | VD Serrurerie" />
+        <meta property="og:description" content="Découvrez nos services : portails, ouverture porte, garde-corps, grilles. Intervention Seine-et-Marne." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://votre-site.com/#/services" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Serrurerie et Ferronnerie",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "VD Serrurerie",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Jouy-sur-Morin",
+                "addressRegion": "Seine-et-Marne",
+                "addressCountry": "FR"
+              }
+            },
+            "areaServed": {
+              "@type": "State",
+              "name": "Seine-et-Marne"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Services de serrurerie",
+              "itemListElement": services.map((service, index) => ({
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": service.title,
+                  "description": service.description
+                }
+              }))
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Accueil",
+                "item": "https://votre-site.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://votre-site.com/#/services"
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
       <div className="container">
         <h2 className="section-title">Nos Services</h2>
         <div className="services-detail-grid">

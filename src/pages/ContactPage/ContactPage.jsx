@@ -1,10 +1,31 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import './ContactPage.css';
 
 function ContactPage({ formData, handleFormChange, handleSubmit }) {
   return (
     <section className="section">
+      <Helmet>
+        <title>Contact et Devis Gratuit Serrurerie - VD Serrurerie | Jouy-sur-Morin 77</title>
+        <meta name="description" content="Contactez VD Serrurerie pour un devis gratuit et sans engagement. Formulaire en ligne, téléphone, email. Intervention rapide en Seine-et-Marne et 100km. ☎️ Réponse sous 24h" />
+        <meta name="keywords" content="contact serrurerie 77, devis gratuit serrurerie, formulaire contact serrurier, serrurier Jouy-sur-Morin, Seine-et-Marne, téléphone serrurier, urgence serrurerie" />
+        <link rel="canonical" href="https://votre-site.com/#/contact" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Contactez VD Serrurerie - Devis Gratuit" />
+        <meta property="og:description" content="Demandez votre devis gratuit. Intervention rapide en Seine-et-Marne." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://votre-site.com/#/contact" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact VD Serrurerie",
+            "description": "Formulaire de contact pour demander un devis de serrurerie",
+            "url": "https://votre-site.com/#/contact"
+          })}
+        </script>
+      </Helmet>
       <div className="container">
         <h2 className="section-title">Demander un Devis</h2>
         <div className="contact-container">

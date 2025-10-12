@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import HomePage from './pages/HomePage/HomePage';
@@ -11,7 +13,6 @@ import './styles/variables.css';
 import './App.css';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('accueil');
   const [formData, setFormData] = useState({
     nom: '',
     prenom: '',
@@ -48,30 +49,28 @@ function App() {
     });
   };
 
-  const navigateTo = (page) => {
-    setCurrentPage(page);
-    window.scrollTo(0, 0);
-  };
-
   return (
-    <>
-      <Header currentPage={currentPage} navigateTo={navigateTo} />
+    <HelmetProvider>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/a-propos" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/galerie" element={<GalleryPage />} />
+          <Route path="/zone" element={<ZonePage />} />
+          <Route path="/contact" element={
+            <ContactPage
+              formData={formData}
+              handleFormChange={handleFormChange}
+              handleSubmit={handleSubmit}
+            />
+          } />
+        </Routes>
 
-      {currentPage === 'accueil' && <HomePage navigateTo={navigateTo} />}
-      {currentPage === 'apropos' && <AboutPage />}
-      {currentPage === 'services' && <ServicesPage />}
-      {currentPage === 'galerie' && <GalleryPage />}
-      {currentPage === 'zone' && <ZonePage />}
-      {currentPage === 'contact' && (
-        <ContactPage
-          formData={formData}
-          handleFormChange={handleFormChange}
-          handleSubmit={handleSubmit}
-        />
-      )}
-
-      <Footer navigateTo={navigateTo} />
-    </>
+        <Footer />
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 
