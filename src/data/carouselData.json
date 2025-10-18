@@ -9,17 +9,17 @@
     },
     {
       "id": 2,
-      "src": "/images/photo-portail-1.webp",
+      "src": "/images/galerie/photo-portail-provins.jpg",
       "alt": "Garde-corps élégant",
-      "title": "Garde-corps balcon",
+      "title": "Portail sur mesure",
       "description": "Design moderne et sécurisé"
     },
     {
       "id": 3,
-      "src": "/images/photo-haut-porte.webp",
+      "src": "/images/photo-marquise-barriere.jpg",
       "alt": "Grille de protection",
-      "title": "Grille de fenêtre décorative",
-      "description": "Alliant sécurité et esthétique"
+      "title": "Marquise et Garde Corps",
+      "description": "Réalisation sur mesure"
     }
   ]
 }

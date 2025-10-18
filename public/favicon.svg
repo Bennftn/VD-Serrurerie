@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond bleu foncé -->
+  <rect width="200" height="200" fill="#2c4a68" rx="10"></rect>
+  
+  <!-- Texte VD -->
+  <text x="100" y="130" font-family="'Playfair Display', serif" font-size="90" font-weight="700" fill="#b8986f" text-anchor="middle" letter-spacing="5">
+    VD
+  </text>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>

@@ -9,13 +9,13 @@ function AboutPage() {
         <title>À Propos - Artisan Serrurier depuis 2019 | VD Serrurerie Jouy-sur-Morin</title>
         <meta name="description" content="Découvrez VD Serrurerie : artisan serrurier autodidacte et passionné d'art depuis 2019. Formation professionnelle 2022. Fer forgé à chaud, soudure, tournage, fraisage, rénovation. Basé à Jouy-sur-Morin en Seine-et-Marne." />
         <meta name="keywords" content="artisan serrurier, ferronnerie art, fer forgé, Jouy-sur-Morin, Seine-et-Marne, formation serrurerie, artisan local, serrurier qualifié, ferronnerie traditionnelle, métallerie 77" />
-        <link rel="canonical" href="https://votre-site.com/a-propos" />
+        <link rel="canonical" href="https://vdserrurerie.com/a-propos" />
         <meta name="robots" content="index, follow" />
         {/* Open Graph */}
         <meta property="og:title" content="À Propos de VD Serrurerie - Artisan Passionné depuis 2019" />
         <meta property="og:description" content="Artisan serrurier autodidacte et passionné. 15 ans d'expérience. Formation professionnelle 2022." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://votre-site.com/a-propos" />
+        <meta property="og:url" content="https://vdserrurerie.com/a-propos" />
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="À Propos de VD Serrurerie" />
@@ -27,7 +27,7 @@ function AboutPage() {
             "@type": "AboutPage",
             "name": "À Propos de VD Serrurerie",
             "description": "Histoire et expertise de VD Serrurerie",
-            "url": "https://votre-site.com/a-propos",
+            "url": "https://vdserrurerie.com/a-propos",
             "mainEntity": {
               "@type": "LocalBusiness",
               "name": "VD Serrurerie",
@@ -53,13 +53,13 @@ function AboutPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Accueil",
-                "item": "https://votre-site.com/"
+                "item": "https://vdserrurerie.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "À Propos",
-                "item": "https://votre-site.com/a-propos"
+                "item": "https://vdserrurerie.com/a-propos"
               }
             ]
           })}

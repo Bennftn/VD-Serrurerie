@@ -6,15 +6,15 @@ function ZonePage() {
   return (
     <section className="section">
       <Helmet>
-        <title>Zone d'Intervention Serrurerie - 100km Seine-et-Marne | VD Serrurerie</title>
+        <title>Zone d'Intervention Serrurerie - 100km La Ferté Gaucher | VD Serrurerie</title>
         <meta name="description" content="VD Serrurerie intervient dans un rayon de 100km autour de Jouy-sur-Morin en Seine-et-Marne : Meaux, Coulommiers, Provins, Melun, La Ferté-Gaucher. Frais de déplacement sur devis." />
         <meta name="keywords" content="zone intervention serrurerie, serrurier Seine-et-Marne, Meaux, Coulommiers, Provins, Melun, 77, déplacement serrurier, intervention serrurerie Île-de-France" />
-        <link rel="canonical" href="https://votre-site.com/zone" />
+        <link rel="canonical" href="https://vdserrurerie.com/zone" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Zone d'Intervention - VD Serrurerie" />
         <meta property="og:description" content="Intervention dans un rayon de 100km en Seine-et-Marne et Île-de-France" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://votre-site.com/zone" />
+        <meta property="og:url" content="https://vdserrurerie.com/zone" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -51,13 +51,13 @@ function ZonePage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Accueil",
-                "item": "https://votre-site.com/"
+                "item": "https://vdserrurerie.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Zone d'Intervention",
-                "item": "https://votre-site.com/zone"
+                "item": "https://vdserrurerie.com/zone"
               }
             ]
           })}
@@ -67,7 +67,7 @@ function ZonePage() {
         <h2 className="section-title">Zone d'Intervention</h2>
         <div className="zone-content">
           <p className="zone-main-text">
-            VD Serrurerie intervient dans un rayon de <strong>100 km autour de la Seine-et-Marne</strong>
+            VD Serrurerie intervient dans un rayon de <strong>100 km autour de la Ferté Gaucher</strong>
           </p>
 
           <div className="zone-details">

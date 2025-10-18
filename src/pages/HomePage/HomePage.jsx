@@ -5,7 +5,7 @@ import carouselData from '../../data/carouselData.json';
 import { Helmet } from 'react-helmet-async';
 import './HomePage.css';
 
-function HomePage() {  // ← ENLÈVE { navigateTo }
+function HomePage() {
   const services = [
     {
       title: "Portails sur mesure",
@@ -40,26 +40,21 @@ function HomePage() {  // ← ENLÈVE { navigateTo }
         <title>VD Serrurerie - Serrurerie Métallerie Ferronnerie d'Art | Jouy-sur-Morin Seine-et-Marne</title>
         <meta name="description" content="VD Serrurerie : artisan serrurier depuis 2019 en Seine-et-Marne. Création de portails en fer forgé, ouverture de porte, garde-corps sur mesure. Intervention 100km autour. Devis gratuit. ☎️ Jouy-sur-Morin 77320" />
         <meta name="keywords" content="serrurerie, serrurier, ferronnerie, portail fer forgé, Jouy-sur-Morin, Seine-et-Marne, ouverture porte, garde-corps, métallerie, 77, artisan serrurier, ferronnerie art" />
-        
         {/* Canonical URL */}
-        <link rel="canonical" href="https://votre-site.com/" />
-        
+        <link rel="canonical" href="https://vdserrurerie.com/" />
         {/* Robots */}
         <meta name="robots" content="index, follow" />
-        
         {/* Open Graph (Facebook, LinkedIn) */}
         <meta property="og:title" content="VD Serrurerie - Ferronnerie d'Art en Seine-et-Marne" />
         <meta property="og:description" content="Artisan serrurier depuis 2019. Création de portails en fer forgé sur mesure. Intervention rapide en Seine-et-Marne." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://votre-site.com/" />
+        <meta property="og:url" content="https://vdserrurerie.com/" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="VD Serrurerie" />
-        
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="VD Serrurerie - Ferronnerie d'Art Seine-et-Marne" />
         <meta name="twitter:description" content="Artisan serrurier depuis 2019. Création de portails en fer forgé sur mesure." />
-        
         {/* Schema.org - LocalBusiness (SIMPLIFIÉ pour meilleur SEO) */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -99,7 +94,6 @@ function HomePage() {  // ← ENLÈVE { navigateTo }
             "priceRange": "€€"
           })}
         </script>
-        
         {/* Schema.org - BreadcrumbList */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -109,7 +103,7 @@ function HomePage() {  // ← ENLÈVE { navigateTo }
               "@type": "ListItem",
               "position": 1,
               "name": "Accueil",
-              "item": "https://votre-site.com/"
+              "item": "https://vdserrurerie.com/"
             }]
           })}
         </script>

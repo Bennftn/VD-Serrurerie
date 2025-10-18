@@ -56,12 +56,12 @@ function ServicesPage() {
         <title>Services Serrurerie Métallerie - Portails, Garde-corps | VD Serrurerie 77</title>
         <meta name="description" content="Tous nos services de serrurerie en Seine-et-Marne : portails sur mesure, ouverture de porte urgence, garde-corps, grilles protection, restauration ferronnerie. Devis gratuit ☎️" />
         <meta name="keywords" content="services serrurerie 77, portail sur mesure, ouverture porte urgence, dépannage serrurier, garde-corps, grille protection, restauration ferronnerie, Seine-et-Marne, Jouy-sur-Morin" />
-        <link rel="canonical" href="https://votre-site.com/services" />
+        <link rel="canonical" href="https://vdserrurerie.com/services" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Services de Serrurerie et Ferronnerie | VD Serrurerie" />
         <meta property="og:description" content="Découvrez nos services : portails, ouverture porte, garde-corps, grilles. Intervention Seine-et-Marne." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://votre-site.com/#/services" />
+        <meta property="og:url" content="https://vdserrurerie.com/services" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -104,13 +104,13 @@ function ServicesPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Accueil",
-                "item": "https://votre-site.com/"
+                "item": "https://vdserrurerie.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://votre-site.com/#/services"
+                "item": "https://vdserrurerie.com/services"
               }
             ]
           })}

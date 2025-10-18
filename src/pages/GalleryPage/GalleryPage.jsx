@@ -12,13 +12,13 @@ function GalleryPage() {
         <title>Galerie Photos - Réalisations Portails Fer Forgé | VD Serrurerie Seine-et-Marne</title>
         <meta name="description" content="Découvrez notre galerie de réalisations en ferronnerie d'art : portails en fer forgé, garde-corps, grilles décoratives, rampes d'escalier, pergolas. Exemples de nos créations artisanales en Seine-et-Marne. Photos de nos projets à Jouy-sur-Morin et alentours." />
         <meta name="keywords" content="galerie ferronnerie, réalisations portails, fer forgé, garde-corps photos, grilles décoratives, photos réalisations serrurerie, Seine-et-Marne, Jouy-sur-Morin, exemples portails, portfolio ferronnerie" />
-        <link rel="canonical" href="https://votre-site.com/galerie" />
+        <link rel="canonical" href="https://vdserrurerie.com/galerie" />
         <meta name="robots" content="index, follow" />
         {/* Open Graph */}
         <meta property="og:title" content="Galerie de Réalisations - VD Serrurerie" />
         <meta property="og:description" content="Découvrez nos créations en fer forgé : portails, garde-corps, grilles..." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://votre-site.com/galerie" />
+        <meta property="og:url" content="https://vdserrurerie.com/galerie" />
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Galerie VD Serrurerie" />
@@ -30,7 +30,7 @@ function GalleryPage() {
             "@type": "ImageGallery",
             "name": "Galerie de réalisations VD Serrurerie",
             "description": "Galerie photos de nos réalisations en ferronnerie d'art et métallerie",
-            "url": "https://votre-site.com/galerie",
+            "url": "https://vdserrurerie.com/galerie",
             "about": {
               "@type": "Thing",
               "name": "Ferronnerie d'art et métallerie"
@@ -38,7 +38,7 @@ function GalleryPage() {
             "associatedMedia": projects.map((project, index) => ({
               "@type": "ImageObject",
               "name": project.title,
-              "contentUrl": `https://votre-site.com/images/projet-${index + 1}.jpg`
+              "contentUrl": `https://vdserrurerie.com/images/projet-${index + 1}.jpg`
             }))
           })}
         </script>
@@ -77,13 +77,13 @@ function GalleryPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Accueil",
-                "item": "https://votre-site.com/"
+                "item": "https://vdserrurerie.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Galerie",
-                "item": "https://votre-site.com/galerie"
+                "item": "https://vdserrurerie.com/galerie"
               }
             ]
           })}

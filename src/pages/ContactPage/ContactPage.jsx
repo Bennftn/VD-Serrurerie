@@ -1,28 +1,106 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { useNavigate } from 'react-router-dom';
 import './ContactPage.css';
 
-function ContactPage({ formData, handleFormChange, handleSubmit }) {
+function ContactPage() {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    nom: '',
+    prenom: '',
+    telephone: '',
+    email: '',
+    typeProjet: '',
+    description: '',
+    zone: '',
+    budget: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    // Validation basique
+    if (!formData.nom || !formData.prenom || !formData.telephone || !formData.email || !formData.typeProjet || !formData.description || !formData.zone) {
+      setSubmitStatus({ type: 'error', message: 'Veuillez remplir tous les champs obligatoires.' });
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: '702b78c4-177b-434b-bccc-f733dde19f2f',
+          name: `${formData.prenom} ${formData.nom}`,
+          email: formData.email,
+          phone: formData.telephone,
+          subject: `Nouveau devis : ${formData.typeProjet}`,
+          message: `
+Type de projet : ${formData.typeProjet}
+Zone : ${formData.zone}
+Budget : ${formData.budget || 'Non spécifié'}
+
+Description :
+${formData.description}
+          `
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        // Redirection vers la page de remerciement
+        navigate('/merci');
+      } else {
+        throw new Error('Erreur lors de l\'envoi');
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Une erreur est survenue. Veuillez réessayer ou nous contacter directement.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="section">
       <Helmet>
         <title>Contact et Devis Gratuit Serrurerie - VD Serrurerie | Jouy-sur-Morin 77</title>
         <meta name="description" content="Contactez VD Serrurerie pour un devis gratuit et sans engagement. Formulaire en ligne, téléphone, email. Intervention rapide en Seine-et-Marne et 100km. ☎️ Réponse sous 24h" />
         <meta name="keywords" content="contact serrurerie 77, devis gratuit serrurerie, formulaire contact serrurier, serrurier Jouy-sur-Morin, Seine-et-Marne, téléphone serrurier, urgence serrurerie" />
-        <link rel="canonical" href="https://votre-site.com/#/contact" />
+        <link rel="canonical" href="https://vdserrurerie.com/contact" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Contactez VD Serrurerie - Devis Gratuit" />
         <meta property="og:description" content="Demandez votre devis gratuit. Intervention rapide en Seine-et-Marne." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://votre-site.com/#/contact" />
+        <meta property="og:url" content="https://vdserrurerie.com/contact" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ContactPage",
             "name": "Contact VD Serrurerie",
             "description": "Formulaire de contact pour demander un devis de serrurerie",
-            "url": "https://votre-site.com/#/contact"
+            "url": "https://vdserrurerie.com/contact"
           })}
         </script>
       </Helmet>
@@ -31,7 +109,14 @@ function ContactPage({ formData, handleFormChange, handleSubmit }) {
         <div className="contact-container">
           <div className="contact-form-wrapper">
             <h3>Formulaire de contact</h3>
-            <div className="contact-form">
+
+            {submitStatus && (
+              <div className={`alert alert-${submitStatus.type}`}>
+                {submitStatus.message}
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="contact-form">
               <div className="form-group">
                 <label>Nom *</label>
                 <input
@@ -39,6 +124,7 @@ function ContactPage({ formData, handleFormChange, handleSubmit }) {
                   name="nom"
                   value={formData.nom}
                   onChange={handleFormChange}
+                  required
                 />
               </div>
 
@@ -49,6 +135,7 @@ function ContactPage({ formData, handleFormChange, handleSubmit }) {
                   name="prenom"
                   value={formData.prenom}
                   onChange={handleFormChange}
+                  required
                 />
               </div>
 
@@ -59,6 +146,7 @@ function ContactPage({ formData, handleFormChange, handleSubmit }) {
                   name="telephone"
                   value={formData.telephone}
                   onChange={handleFormChange}
+                  required
                 />
               </div>
 
@@ -69,6 +157,7 @@ function ContactPage({ formData, handleFormChange, handleSubmit }) {
                   name="email"
                   value={formData.email}
                   onChange={handleFormChange}
+                  required
                 />
               </div>
 
@@ -78,6 +167,7 @@ function ContactPage({ formData, handleFormChange, handleSubmit }) {
                   name="typeProjet"
                   value={formData.typeProjet}
                   onChange={handleFormChange}
+                  required
                 >
                   <option value="">Sélectionnez un type</option>
                   <option value="portail">Portail</option>
@@ -100,6 +190,7 @@ function ContactPage({ formData, handleFormChange, handleSubmit }) {
                   name="description"
                   value={formData.description}
                   onChange={handleFormChange}
+                  required
                 ></textarea>
               </div>
 
@@ -111,6 +202,7 @@ function ContactPage({ formData, handleFormChange, handleSubmit }) {
                   value={formData.zone}
                   onChange={handleFormChange}
                   placeholder="Ville ou code postal"
+                  required
                 />
               </div>
 
@@ -125,10 +217,14 @@ function ContactPage({ formData, handleFormChange, handleSubmit }) {
                 />
               </div>
 
-              <button onClick={handleSubmit} className="cta-button submit-button">
-                Envoyer ma demande
+              <button
+                type="submit"
+                className="cta-button submit-button"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Envoi en cours...' : 'Envoyer ma demande'}
               </button>
-            </div>
+            </form>
           </div>
 
           <div className="contact-info">

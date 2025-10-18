@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header/Header';
@@ -9,46 +9,11 @@ import ServicesPage from './pages/ServicesPage/ServicesPage';
 import GalleryPage from './pages/GalleryPage/GalleryPage';
 import ZonePage from './pages/ZonePage/ZonePage';
 import ContactPage from './pages/ContactPage/ContactPage';
+import ThankYouPage from './pages/ThankYouPage/ThankYouPage';
 import './styles/variables.css';
 import './App.css';
 
 function App() {
-  const [formData, setFormData] = useState({
-    nom: '',
-    prenom: '',
-    telephone: '',
-    email: '',
-    typeProjet: '',
-    description: '',
-    zone: '',
-    budget: ''
-  });
-
-  const handleFormChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = () => {
-    if (!formData.nom || !formData.prenom || !formData.telephone || !formData.email || !formData.typeProjet || !formData.description || !formData.zone) {
-      alert('Veuillez remplir tous les champs obligatoires');
-      return;
-    }
-    alert('Merci pour votre demande ! Nous vous contacterons dans les plus brefs délais.');
-    setFormData({
-      nom: '',
-      prenom: '',
-      telephone: '',
-      email: '',
-      typeProjet: '',
-      description: '',
-      zone: '',
-      budget: ''
-    });
-  };
-
   return (
     <HelmetProvider>
       <BrowserRouter>
@@ -59,15 +24,9 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/galerie" element={<GalleryPage />} />
           <Route path="/zone" element={<ZonePage />} />
-          <Route path="/contact" element={
-            <ContactPage
-              formData={formData}
-              handleFormChange={handleFormChange}
-              handleSubmit={handleSubmit}
-            />
-          } />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/merci" element={<ThankYouPage />} />
         </Routes>
-
         <Footer />
       </BrowserRouter>
     </HelmetProvider>

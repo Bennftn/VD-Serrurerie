@@ -1,0 +1,138 @@
+.thank-you-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thank-you-content {
+  max-width: 700px;
+  text-align: center;
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.success-icon {
+  color: #28a745;
+  margin-bottom: 1.5rem;
+  animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.thank-you-content h1 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.thank-you-message {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.next-steps {
+  background: var(--color-background);
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.next-steps h3 {
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.step {
+  text-align: center;
+}
+
+.step-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: var(--color-accent);
+  color: white;
+  border-radius: 50%;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.thank-you-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.secondary-button {
+  padding: 12px 30px;
+  background: white;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.secondary-button:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .thank-you-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .thank-you-actions {
+    flex-direction: column;
+  }
+
+  .thank-you-actions a {
+    width: 100%;
+    justify-content: center;
+  }
+}

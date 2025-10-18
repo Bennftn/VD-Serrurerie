@@ -21,6 +21,7 @@
 .about-section ul {
   list-style-position: inside;
   margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 .about-section li {
