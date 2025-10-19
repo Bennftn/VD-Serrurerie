@@ -231,18 +231,10 @@ ${formData.description}
             <h3>Mes Coordonnées</h3>
 
             <div className="info-item">
-              <Phone size={24} />
-              <div>
-                <strong>Téléphone</strong>
-                <p>À venir</p>
-              </div>
-            </div>
-
-            <div className="info-item">
               <Mail size={24} />
               <div>
                 <strong>Email</strong>
-                <p>À venir</p>
+                <p>vdserrurerie@gmail.com</p>
               </div>
             </div>
 
@@ -251,14 +243,6 @@ ${formData.description}
               <div>
                 <strong>Adresse</strong>
                 <p>Jouy-sur-Morin<br />Seine-et-Marne</p>
-              </div>
-            </div>
-
-            <div className="info-item">
-              <Clock size={24} />
-              <div>
-                <strong>Horaires</strong>
-                <p>À définir</p>
               </div>
             </div>
 

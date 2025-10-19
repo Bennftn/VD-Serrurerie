@@ -43,8 +43,8 @@ function ThankYouPage() {
             <Link to="/" className="cta-button">
               Retour à l'accueil
             </Link>
-            <Link to="/realisations" className="secondary-button">
-              Voir nos réalisations
+            <Link to="/galerie" className="secondary-button">
+              Voir mes réalisations
             </Link>
           </div>
         </div>

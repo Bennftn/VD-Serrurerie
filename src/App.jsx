@@ -10,6 +10,8 @@ import GalleryPage from './pages/GalleryPage/GalleryPage';
 import ZonePage from './pages/ZonePage/ZonePage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import ThankYouPage from './pages/ThankYouPage/ThankYouPage';
+import MentionsLegales from './pages/MentionsLegales/MentionsLegales';
+import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite/PolitiqueConfidentialite';
 import './styles/variables.css';
 import './App.css';
 
@@ -26,6 +28,8 @@ function App() {
           <Route path="/zone" element={<ZonePage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/merci" element={<ThankYouPage />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+          <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
         </Routes>
         <Footer />
       </BrowserRouter>

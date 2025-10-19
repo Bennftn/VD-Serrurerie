@@ -26,10 +26,7 @@ function Footer() {
           <div className="footer-section">
             <h3>Contact</h3>
             <p>
-              <Phone size={16} className="footer-icon" /> À venir
-            </p>
-            <p>
-              <Mail size={16} className="footer-icon" /> À venir
+              <Mail size={16} className="footer-icon" />vdserrurerie@gmail.com
             </p>
             <p>
               <MapPin size={16} className="footer-icon" /> Jouy-sur-Morin
@@ -38,7 +35,12 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2025 VD Serrurerie. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} VD Serrurerie. Tous droits réservés.</p>
+          <div className="footer-legal-links">
+            <Link to="/mentions-legales">Mentions légales</Link>
+            <span className="separator">|</span>
+            <Link to="/politique-confidentialite">Politique de confidentialité</Link>
+          </div>
         </div>
       </div>
     </footer>

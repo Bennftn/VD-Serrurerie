@@ -21,38 +21,38 @@
     {
       "title": "Garde-corps",
       "category": "Garde-corps",
-      "image": "/images/galerie/photo-test-4.jpg",
+      "image": "/images/galerie/photo-garde-corps.jpg",
       "alt": "Photo d'un garde-corps en fer forgé"
     },
     {
       "title": "Portail",
       "category": "Portails",
       "image": "/images/galerie/photo-portail-provins.jpg",
-      "alt": "Photo d'un portail à Provins"
+      "alt": "Photo d'un portail"
     },
     {
       "title": "Portail",
       "category": "Portails",
       "image": "/images/galerie/photo-portail-gris.jpg",
-      "alt": "Photo d'un portail à Provins"
+      "alt": "Photo d'un portail"
     },
     {
       "title": "Portail",
       "category": "Portails",
       "image": "/images/galerie/photo-portail-blanc.jpg",
-      "alt": "Photo d'un portail à Provins"
+      "alt": "Photo d'un portail"
     },
     {
       "title": "Portail",
       "category": "Structures",
       "image": "/images/galerie/photo-porte-verte.jpg",
-      "alt": "Photo d'un portail à Provins"
+      "alt": "Photo d'un portail"
     },
     {
       "title": "Pergola métallique",
       "category": "Structures",
       "image": "/images/galerie/photo-haut-porte.jpg",
-      "alt": "Photo d'un portail à Provins"
+      "alt": "Photo d'une pergola"
     }
   ]
 }

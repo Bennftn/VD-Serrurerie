@@ -35,8 +35,8 @@ function ZonePage() {
               "@type": "GeoCircle",
               "geoMidpoint": {
                 "@type": "GeoCoordinates",
-                "latitude": "48.7968",
-                "longitude": "3.2537"
+                "latitude": "48.794851951914865",
+                "longitude": "3.292927452185951"
               },
               "geoRadius": "100000"
             }

@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://votre-site.com/sitemap.xml
+# Pages à ne pas indexer
+Disallow: /merci
+
+Sitemap: https://vdserrurerie.com/sitemap.xml

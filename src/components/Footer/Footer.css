@@ -42,3 +42,44 @@
   padding-top: 2rem;
   border-top: 1px solid var(--color-secondary);
 }
+.footer-bottom p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-legal-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-legal-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-legal-links a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.footer-legal-links .separator {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-legal-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-legal-links .separator {
+    display: none;
+  }
+}
