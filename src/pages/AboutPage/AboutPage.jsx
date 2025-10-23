@@ -80,8 +80,8 @@ function AboutPage() {
           <div className="about-section">
             <h3>Expérience et Qualification</h3>
             <p>
-              J'ai suivi la formation technique réservée aux professionnels de la serrurerie,
-              les 28 et 29 juin 2022. Cette formation a pour objectifs la connaissance des serrures,
+              J'ai suivi la formation technique réservée aux professionnels de la serrurerie.
+              Cette formation a pour objectifs la connaissance des serrures,
               le dépannage et les techniques d'ouvertures.
             </p>
           </div>

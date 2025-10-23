@@ -113,7 +113,7 @@ function HomePage() {
           <p className="hero-subtitle">Ouverture de porte - Créations sur mesure en fer forgé</p>
           <p className="hero-description">
             Artisan depuis 2019, situé à Jouy-sur-Morin, je réalise sur mesure tout type de projets :
-            portails, marquises, garde-corps, appuis de fenêtre...
+            portails, marquises, garde-corps, garde-corps de fenêtre...
           </p>
           <Link to="/contact" className="cta-button">
             Demander un devis
